@@ -32,7 +32,7 @@
 
 window.SHOPIFY_CONFIG = {
   // Replace with your real store domain, e.g. "https://holy-primate-abc123.myshopify.com"
-  storeDomain: "https://YOUR-STORE.myshopify.com",
+  storeDomain: "https://holyprimate.myshopify.com",
 
   // Replace each value with the matching collection's handle from Shopify admin
   collections: {
