@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Holy Primate</title>
+<meta name="description" content="Clothing, art, and digital releases from Holy Primate.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="wordmark">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2"/>
+      <path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <line x1="50" y1="66" x2="50" y2="74" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+    Holy Primate
+  </a>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="help.html">Help &amp; FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="cart-btn" id="open-cart" onclick="var c=document.getElementById('cart'); if(c &amp;&amp; c.showModal) c.showModal();">Cart</button>
+    <button class="nav-toggle" aria-label="Toggle menu">Menu</button>
+  </div>
+</nav>
+
+<header class="page-header">
+  <span class="eyebrow">Shop</span>
+  <h1>Everything, in one place</h1>
+  <p>Clothing, art, and digital releases. Add to cart and check out securely through Shopify.</p>
+</header>
+
+<div id="demo-notice" class="demo-notice">
+  Showing example products — this shop goes live the moment your Shopify store is connected.
+</div>
+
+<section class="chapter-section" id="clothing">
+  <div class="container">
+    <span class="eyebrow">Chapter one</span>
+    <h2>Clothing</h2>
+    <p class="chapter-line">Wearable pieces, printed small and built to last.</p>
+
+    <div class="product-grid" data-collection="clothing" data-label="Clothing">
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Clothing</span>
+          <h4>Primate Seal Tee</h4>
+          <p class="product-price">$32.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Clothing</span>
+          <h4>Ash &amp; Ember Hoodie</h4>
+          <p class="product-price">$58.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Clothing</span>
+          <h4>Halo Crewneck</h4>
+          <p class="product-price">$46.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter-section" id="art">
+  <div class="container">
+    <span class="eyebrow">Chapter two</span>
+    <h2>Art</h2>
+    <p class="chapter-line">Prints and posters for the wall, not the feed.</p>
+
+    <div class="product-grid" data-collection="art" data-label="Art">
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Art</span>
+          <h4>Sacred Primate Print, 18×24</h4>
+          <p class="product-price">$28.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Art</span>
+          <h4>Ember Study No. 1</h4>
+          <p class="product-price">$40.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Art</span>
+          <h4>Coin Seal Poster</h4>
+          <p class="product-price">$24.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="chapter-section" id="digital" style="border-bottom:none;">
+  <div class="container">
+    <span class="eyebrow">Chapter three</span>
+    <h2>Digital content</h2>
+    <p class="chapter-line">Music, plugins, and instrument packs — download and go.</p>
+
+    <div class="product-grid" data-collection="digital" data-label="Digital">
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Digital · Music</span>
+          <h4>Liturgy EP (WAV / MP3)</h4>
+          <p class="product-price">$9.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Digital · Plugin</span>
+          <h4>Relic Drum Machine</h4>
+          <p class="product-price">$39.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Digital · Sample pack</span>
+          <h4>Primate Percussion Pack</h4>
+          <p class="product-price">$24.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+      <div class="product-card">
+        <div class="product-media">
+          <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="1.5"/><path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="1.5"/><path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="1.5"/></svg>
+        </div>
+        <div class="product-info">
+          <span class="eyebrow">Digital · Plugin</span>
+          <h4>Ash Tape Saturator</h4>
+          <p class="product-price">$29.00</p>
+          <span class="btn btn-outline btn-block" style="opacity:.5; cursor:default;">Preview only</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div class="footer-mark">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="50" cy="50" r="46" stroke="currentColor" stroke-width="2"/>
+        <path d="M28 58 Q28 34 50 30 Q72 34 72 58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <path d="M36 58 Q36 44 50 42 Q64 44 64 58" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        <line x1="50" y1="66" x2="50" y2="74" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      Holy Primate
+    </div>
+    <ul class="footer-links">
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="help.html">Help &amp; FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+  <p class="footer-meta">© 2026 Holy Primate. All designs, music, and instrument packs are original work.</p>
+</footer>
+
+<script src="js/shopify-config.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
