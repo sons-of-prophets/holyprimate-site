@@ -1,22 +1,23 @@
 /* ==========================================================================
-   HOLY PRIMATE — design system
-   Dark, engraved-relic aesthetic. Fraunces (carved/ceremonial) + Space Grotesk
-   (clean/technical) + JetBrains Mono (labels, prices, tags).
+   HOLY PRIMATE — design system v2 "MARKER"
+   Built from Phil's actual artwork: raw white marker linework on true black,
+   acid yellow (#F6FF00) accent, punk-zine-meets-devotional energy.
+   Bebas Neue (loud/condensed) + Space Grotesk (clean) + JetBrains Mono (labels).
    ========================================================================== */
 
 :root {
-  --ink: #171310;
-  --surface: #211b15;
-  --surface-2: #2b241c;
-  --bone: #ede4d3;
-  --dust: #9c9080;
-  --relic: #c6963e;
-  --relic-bright: #d4a34e;
-  --ember: #a13f26;
-  --line: rgba(237, 228, 211, 0.14);
-  --line-strong: rgba(237, 228, 211, 0.28);
+  --ink: #0b0b09;
+  --surface: #141412;
+  --surface-2: #1c1c19;
+  --bone: #f4f1e6;
+  --dust: #8f8c80;
+  --relic: #f6ff00;
+  --relic-bright: #ffff4d;
+  --ember: #e33b26;
+  --line: rgba(244, 241, 230, 0.16);
+  --line-strong: rgba(244, 241, 230, 0.4);
 
-  --font-display: 'Fraunces', serif;
+  --font-display: 'Bebas Neue', 'Space Grotesk', sans-serif;
   --font-body: 'Space Grotesk', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
@@ -43,8 +44,9 @@ button { font-family: inherit; }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
-  font-weight: 500;
-  letter-spacing: -0.01em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   margin: 0 0 0.4em;
 }
 
@@ -55,7 +57,7 @@ p { margin: 0 0 1em; }
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 11px;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--relic);
   display: inline-block;
@@ -75,24 +77,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
-  background: rgba(23, 19, 16, 0.92);
+  padding: 14px 24px;
+  background: rgba(11, 11, 9, 0.94);
   backdrop-filter: blur(6px);
-  border-bottom: 1px solid var(--line);
+  border-bottom: 2px solid var(--line-strong);
 }
 
 .wordmark {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-display);
-  font-size: 19px;
-  letter-spacing: 0.01em;
   text-decoration: none;
   color: var(--bone);
   white-space: nowrap;
 }
 
+.wordmark img { height: 44px; width: auto; }
 .wordmark svg { width: 26px; height: 26px; flex-shrink: 0; color: var(--relic); }
 
 .nav-right { display: flex; align-items: center; gap: 24px; }
@@ -103,37 +103,39 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   list-style: none;
   margin: 0;
   padding: 0;
-  font-size: 14px;
-  letter-spacing: 0.02em;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 .nav-links a {
   text-decoration: none;
-  opacity: 0.82;
+  opacity: 0.85;
   padding-bottom: 3px;
-  border-bottom: 1px solid transparent;
-  transition: border-color .15s, opacity .15s;
+  border-bottom: 2px solid transparent;
+  transition: border-color .15s, opacity .15s, color .15s;
 }
 
-.nav-links a:hover, .nav-links a:focus-visible { opacity: 1; border-color: var(--relic); }
+.nav-links a:hover, .nav-links a:focus-visible { opacity: 1; color: var(--relic); border-color: var(--relic); }
 .nav-links a.active { border-color: var(--relic); opacity: 1; }
 
 .cart-btn {
   background: none;
-  border: 1px solid var(--line-strong);
+  border: 2px solid var(--line-strong);
   color: var(--bone);
   font-family: var(--font-mono);
   font-size: 13px;
   padding: 8px 14px;
   cursor: pointer;
-  transition: border-color .15s;
+  transition: border-color .15s, color .15s, box-shadow .15s;
 }
-.cart-btn:hover { border-color: var(--relic); }
+.cart-btn:hover { border-color: var(--relic); color: var(--relic); box-shadow: 3px 3px 0 var(--relic); }
 
 .nav-toggle {
   display: none;
   background: none;
-  border: 1px solid var(--line-strong);
+  border: 2px solid var(--line-strong);
   color: var(--bone);
   padding: 8px 10px;
   cursor: pointer;
@@ -149,7 +151,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
     flex-direction: column;
     background: var(--ink);
     padding: 18px 24px 22px;
-    border-bottom: 1px solid var(--line);
+    border-bottom: 2px solid var(--line-strong);
     gap: 16px;
   }
   .nav-links.open { display: flex; }
@@ -164,22 +166,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   justify-content: center;
   gap: 8px;
   padding: 14px 30px;
-  font-family: var(--font-body);
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
+  font-family: var(--font-display);
+  font-size: 19px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid transparent;
-  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+  border: 2px solid transparent;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease, border-color .12s ease, color .12s ease;
 }
 
-.btn-primary { background: var(--relic); color: var(--ink); }
-.btn-primary:hover { transform: translateY(-1px); background: var(--relic-bright); }
-.btn-primary:disabled, .btn-primary[shopify-attr\:disabled] { opacity: 0.45; cursor: not-allowed; transform: none; }
+.btn-primary { background: var(--relic); color: #0b0b09; border-color: var(--relic); }
+.btn-primary:hover { transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--bone); background: var(--relic-bright); }
+.btn-primary:disabled, .btn-primary[shopify-attr\:disabled] { opacity: 0.45; cursor: not-allowed; transform: none; box-shadow: none; }
 
 .btn-outline { background: transparent; border-color: var(--line-strong); color: var(--bone); }
-.btn-outline:hover { border-color: var(--relic); }
+.btn-outline:hover { border-color: var(--relic); color: var(--relic); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--relic); }
 
 .btn-block { width: 100%; }
 
@@ -193,40 +195,48 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 100px 24px 80px;
+  padding: 90px 24px 80px;
   overflow: hidden;
 }
 
 .hero-mark {
   position: absolute;
-  width: 620px;
-  height: 620px;
-  max-width: 140vw;
-  color: var(--relic);
-  opacity: 0.1;
-  top: 48%;
+  width: 560px;
+  height: auto;
+  max-width: 130vw;
+  opacity: 0.07;
+  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-6deg);
   pointer-events: none;
 }
 
-.hero .eyebrow { margin-bottom: 22px; position: relative; z-index: 1; }
+.hero .eyebrow { margin-bottom: 26px; position: relative; z-index: 1; }
+
+.hero-logo {
+  width: min(680px, 88vw);
+  height: auto;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+}
 
 .hero h1 {
-  font-size: clamp(46px, 9vw, 104px);
+  font-size: clamp(52px, 10vw, 120px);
   margin: 0;
   position: relative;
   z-index: 1;
-  line-height: 1.02;
+  line-height: 0.95;
 }
 
 .hero .ethos {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(18px, 2.4vw, 23px);
+  font-family: var(--font-mono);
+  font-size: clamp(13px, 1.8vw, 16px);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--dust);
-  max-width: 600px;
-  margin: 26px auto 40px;
+  max-width: 640px;
+  margin: 30px auto 42px;
   position: relative;
   z-index: 1;
 }
@@ -238,29 +248,41 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .chapters {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+  border-top: 2px solid var(--line-strong);
+  border-bottom: 2px solid var(--line-strong);
 }
 
 .chapter-link {
   display: block;
-  padding: 56px 32px;
-  border-right: 1px solid var(--line);
+  padding: 52px 32px 56px;
+  border-right: 2px solid var(--line-strong);
   text-decoration: none;
   color: var(--bone);
-  transition: background .2s;
+  transition: background .15s;
+  position: relative;
 }
 
 .chapter-link:last-child { border-right: none; }
 .chapter-link:hover { background: var(--surface); }
 
-.chapter-link h3 { font-size: 29px; margin: 14px 0 10px; }
+.chapter-icon {
+  height: 110px;
+  width: auto;
+  margin: 0 0 18px;
+  filter: none;
+  transition: transform .15s ease;
+}
+.chapter-link:hover .chapter-icon { transform: rotate(-3deg) scale(1.06); }
+
+.chapter-link h3 { font-size: 40px; margin: 10px 0 8px; }
+.chapter-link:hover h3 { color: var(--relic); text-shadow: 2px 0 0 #ff2fd6, -2px 0 0 #00e5ff; }
 .chapter-link p { color: var(--dust); font-size: 15px; margin: 0 0 22px; }
 .chapter-arrow { font-family: var(--font-mono); font-size: 13px; color: var(--relic); }
 
 @media (max-width: 860px) {
   .chapters { grid-template-columns: 1fr; }
-  .chapter-link { border-right: none; border-bottom: 1px solid var(--line); }
+  .chapter-link { border-right: none; border-bottom: 2px solid var(--line-strong); }
+  .chapter-link:last-child { border-bottom: none; }
 }
 
 /* ---------- Maker band (home) ---------- */
@@ -268,12 +290,12 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 .maker-band { padding: 100px 24px; text-align: center; }
 
 .maker-band blockquote {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-size: clamp(20px, 2.6vw, 27px);
+  font-family: var(--font-body);
+  font-size: clamp(18px, 2.4vw, 24px);
+  font-weight: 500;
   max-width: 720px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--bone);
 }
 
@@ -283,22 +305,22 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 12px;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--dust);
+  color: var(--relic);
   margin-top: 26px;
   font-style: normal;
 }
 
 /* ---------- Page header (interior pages) ---------- */
 
-.page-header { padding: 64px 24px 36px; border-bottom: 1px solid var(--line); text-align: center; }
-.page-header h1 { font-size: clamp(32px, 5vw, 50px); margin-top: 12px; }
+.page-header { padding: 64px 24px 36px; border-bottom: 2px solid var(--line-strong); text-align: center; }
+.page-header h1 { font-size: clamp(42px, 7vw, 72px); margin-top: 12px; }
 .page-header p { color: var(--dust); max-width: 540px; margin: 14px auto 0; }
 
 /* ---------- Demo notice ---------- */
 
 .demo-notice {
   background: var(--ember);
-  color: var(--bone);
+  color: #fff;
   font-family: var(--font-mono);
   font-size: 13px;
   text-align: center;
@@ -308,9 +330,9 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- Shop sections ---------- */
 
-.chapter-section { padding: 68px 0; border-bottom: 1px solid var(--line); }
+.chapter-section { padding: 68px 0; border-bottom: 2px solid var(--line-strong); }
 .chapter-section .container > .eyebrow { margin-bottom: 10px; }
-.chapter-section h2 { font-size: clamp(27px, 4vw, 38px); }
+.chapter-section h2 { font-size: clamp(36px, 5vw, 54px); }
 .chapter-section .chapter-line { color: var(--dust); max-width: 520px; margin: 6px 0 0; }
 
 .product-grid {
@@ -322,27 +344,35 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .product-card {
   background: var(--surface);
-  border: 1px solid var(--line);
+  border: 2px solid var(--line-strong);
   display: flex;
   flex-direction: column;
+  transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
+}
+
+.product-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--relic);
+  border-color: var(--bone);
 }
 
 .product-media {
   aspect-ratio: 1;
-  background: linear-gradient(160deg, var(--surface-2), var(--ink));
+  background: #0e0e0c;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   overflow: hidden;
+  border-bottom: 2px solid var(--line);
 }
 
 .product-media svg { width: 34%; opacity: 0.4; color: var(--relic); }
 .product-media img { width: 100%; height: 100%; object-fit: cover; }
 
 .product-info { padding: 18px 20px 22px; display: flex; flex-direction: column; gap: 6px; flex: 1; }
-.product-info h4 { font-size: 19px; margin: 6px 0 0; font-weight: 500; }
-.product-price { font-family: var(--font-mono); font-size: 15px; color: var(--dust); margin: 8px 0 0; }
+.product-info h4 { font-size: 24px; margin: 6px 0 0; }
+.product-price { font-family: var(--font-mono); font-size: 15px; color: var(--relic); margin: 8px 0 0; }
 .product-info .btn { margin-top: 16px; }
 .product-info shopify-variant-selector { margin-top: 10px; font-size: 13px; }
 
@@ -357,7 +387,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin: 0 auto;
 }
 
-.contact-side h2 { font-size: 22px; }
+.contact-side h2 { font-size: 30px; }
 .contact-side p { color: var(--dust); font-size: 15px; }
 .contact-side .email-link {
   display: inline-block;
@@ -366,7 +396,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   font-size: 14px;
   color: var(--relic);
   text-decoration: none;
-  border-bottom: 1px solid var(--relic);
+  border-bottom: 2px solid var(--relic);
 }
 
 .form-field { display: flex; flex-direction: column; gap: 8px; margin-bottom: 22px; }
@@ -380,7 +410,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .form-field input, .form-field select, .form-field textarea {
   background: var(--surface);
-  border: 1px solid var(--line-strong);
+  border: 2px solid var(--line-strong);
   color: var(--bone);
   padding: 13px 14px;
   font-family: var(--font-body);
@@ -392,7 +422,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .form-status { margin-top: 4px; font-size: 14px; min-height: 20px; }
 .form-status.success { color: #9bc48a; }
-.form-status.error { color: #d9836f; }
+.form-status.error { color: #e8846d; }
 
 @media (max-width: 820px) {
   .contact-layout { grid-template-columns: 1fr; gap: 40px; }
@@ -402,7 +432,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 .faq-wrap { max-width: 760px; margin: 0 auto; padding: 64px 24px 100px; }
 .faq-group { margin-bottom: 44px; }
-.faq-group h2 { font-size: 21px; border-bottom: 1px solid var(--line); padding-bottom: 14px; margin-bottom: 2px; }
+.faq-group h2 { font-size: 28px; border-bottom: 2px solid var(--line-strong); padding-bottom: 14px; margin-bottom: 2px; }
 
 .faq-item { border-bottom: 1px solid var(--line); }
 .faq-question {
@@ -413,6 +443,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   color: var(--bone);
   font-family: var(--font-body);
   font-size: 16px;
+  font-weight: 500;
   padding: 18px 2px;
   display: flex;
   justify-content: space-between;
@@ -430,22 +461,24 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
 
 /* ---------- Footer ---------- */
 
-.site-footer { border-top: 1px solid var(--line); padding: 52px 24px 34px; margin-top: 60px; }
+.site-footer { border-top: 2px solid var(--line-strong); padding: 52px 24px 34px; margin-top: 60px; }
 
 .footer-grid {
   max-width: var(--container);
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 28px;
 }
 
-.footer-mark { display: flex; align-items: center; gap: 10px; font-family: var(--font-display); font-size: 17px; }
+.footer-mark { display: flex; align-items: center; gap: 10px; }
+.footer-mark img { height: 40px; width: auto; }
 .footer-mark svg { width: 22px; height: 22px; color: var(--relic); }
 
-.footer-links { display: flex; gap: 24px; list-style: none; padding: 0; margin: 0; font-size: 14px; flex-wrap: wrap; }
-.footer-links a { text-decoration: none; opacity: 0.82; }
+.footer-links { display: flex; gap: 24px; list-style: none; padding: 0; margin: 0; font-family: var(--font-mono); font-size: 13px; text-transform: uppercase; letter-spacing: 0.06em; flex-wrap: wrap; }
+.footer-links a { text-decoration: none; opacity: 0.85; }
 .footer-links a:hover { opacity: 1; color: var(--relic); }
 
 .footer-meta {
@@ -453,6 +486,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   margin: 26px auto 0;
   color: var(--dust);
   font-size: 13px;
+  font-family: var(--font-mono);
 }
 
 @media (prefers-reduced-motion: reduce) {
